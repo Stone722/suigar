@@ -12,7 +12,7 @@ interface SidebarProps {
 const List = [
   {
     title: "LootBox",
-    url: "/lootBox",
+    url: "/lootbox",
   },
   {
     title: "NFT",
@@ -86,7 +86,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
   return (
     <aside
-      className={`bg-black-1 absolute left-0 top-0 z-9999 flex h-screen min-w-55 flex-col overflow-y-hidden border-dashed pt-20 text-white duration-200 ease-linear sm:static sm:translate-x-0 ${
+      className={`absolute left-0 top-0 z-9999 flex h-screen min-w-55 flex-col overflow-y-hidden border-dashed bg-black-1 pt-20 text-white duration-200 ease-linear sm:static sm:translate-x-0 ${
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -97,7 +97,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li key={index}>
                 <Link
                   href={item.url}
-                  className={`hover:bg-hover-1 group relative flex items-center gap-2.5 rounded-sm px-5 py-3 font-medium duration-100 ease-in-out ${
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-5 py-3 font-medium duration-100 ease-in-out hover:bg-hover-1 ${
                     pathname.includes(item.url) && " bg-hover hover:bg-hover"
                   }`}
                 >
